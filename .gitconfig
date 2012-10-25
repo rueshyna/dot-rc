@@ -1,5 +1,20 @@
 [user]
-	name = Rueshyna
-	email = rueshyna(XD)gmail.com
+  name = Rueshyna
+  email = rueshyna(XD)gmail.com
 [color]
-	ui = auto
+  ui = auto
+  branch = auto
+  interactive = auto
+  status = auto
+  showbranch = auto
+[merge]
+  ff = false
+  log = true
+[diff]
+  renames = copy
+[push]
+  default = tracking
+[alias]
+  st = status
+  co = checkout
+  ci = commit
