@@ -12,6 +12,7 @@ set -x PROMPT_HOST (hostname)
 set -x PROMPT_SHELL fish
 
 eval (cat ~/.config/fish/_ruby_path_.fish)
+eval (cat ~/.config/fish/_pythonbrew_path_.fish)
 
 ##### Function #####
 function fish_prompt -d 'custom prompt'
