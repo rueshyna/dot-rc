@@ -1,7 +1,7 @@
 function pythonbrew -d 'pythonbrew enVironment Manager'
   # run pythonbrew and capture the resulting environment
   set -l pythonbrew_path ~/.config/fish/_pythonbrew_path_.fish
-  set -l env_file (mktemp -t rvm.fish.XXXXXXXXXX)
+  set -l env_file (mktemp -t pythonbrew.fish.XXXXXXXXXX)
   bash -c 'source .pythonbrew/etc/bashrc; pythonbrew "$@"; status=$?; env > "$0"; exit $status' $env_file $argv
 
   # apply pythonbrew_* and *PATH variables from the captured environment
