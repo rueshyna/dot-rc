@@ -5,7 +5,7 @@ function pythonbrew -d 'pythonbrew enVironment Manager'
   bash -c 'source .pythonbrew/etc/bashrc; pythonbrew "$@"; status=$?; env > "$0"; exit $status' $env_file $argv
 
   # apply pythonbrew_* and *PATH variables from the captured environment
-  grep '^pythonbrew\|^[^=]*PATH\|^GEM_HOME' $env_file | sed '/^[^=]*PATH/y/:/ /; s/^/set -xg /; s/=/ /; s/$/ ;/; s/(//; s/)//' > (echo $pythonbrew_path)
+  grep '^PYTHONPATH\|^PATH' $env_file | sed '/^[^=]*PATH/y/:/ /; s/^/set -xg /; s/=/ /; s/$/ ;/; s/(//; s/)//' > (echo $pythonbrew_path)
   and eval (cat $pythonbrew_path)
 
   # clean up

@@ -5,18 +5,19 @@
 ###################
 
 set -u CLASSPATH
-set -x LC_ALL en_US.UTF-8
-set -x LANG en_US.UTF-8
-set -x PATH $PATH /usr/texbin ~/bin
-set -x PROMPT_HOST (hostname)
-set -x PROMPT_SHELL fish
+set -gx LC_ALL en_US.UTF-8
+set -gx LANG en_US.UTF-8
+set -gx PATH $PATH /usr/texbin ~/bin /usr/local/sbin
+set -gx PROMPT_HOST (hostname)
+set -gx PROMPT_SHELL fish
+set -gx PYTHONBREW_ROOT /Users/rues/.pythonbrew
 
 eval (cat ~/.config/fish/_ruby_path_.fish)
 eval (cat ~/.config/fish/_pythonbrew_path_.fish)
 
 ##### Function #####
 function fish_prompt -d 'custom prompt'
-  set -x TERM xterm-256color
+  set -xg TERM xterm-256color
   prompt.rb
 end
 
