@@ -4,3 +4,6 @@
 export PATH+=:/usr/local/sbin
 export PATH+=:~/bin
 export PYTHONBREW_ROOT=/Users/rues/.pythonbrew
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
